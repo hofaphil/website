@@ -28,6 +28,7 @@ build/
 ### Mac ###
 .DS_Store
 
-### SSL ###
+### Other ###
 *.p12
 *.env
+renewCertificate.sh
