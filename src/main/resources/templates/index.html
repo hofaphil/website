@@ -5,27 +5,38 @@
     <th:block th:replace="fragments/head"/>
     <th:block th:replace="fragments/icons"/>
 </head>
-<body class="bg-light">
-<th:block th:replace="fragments/nav"/>
+<body class="bg-black">
 
-<div class="text-center m-4">
-    <div class="card border-dark p-3">
-        <div class="row align-items-center">
-            <div class="col-md-auto">
-                <img class="img-fluid" src="img/Logo.png" alt="log">
-            </div>
-            <div class="col">
-                <h1 class="mt-5">Sudoku Expert</h1>
-                <h4 class="mt-5">Play free and unlimited Sudoku!</h4>
-                <div class="mt-5 mb-2 mx-auto" style="max-width: 25rem">
-                    <a href="http://play.google.com/store/apps/details?id=com.aol.philipphofer" target="_blank">
-                        <img class="img-fluid" src="/img/google-play-badge.png" alt="get the app" style="width: 50%; height: 50%;">
-                    </a>
-                </div>
-            </div>
-        </div>
+<div class="m-5 card bg-black text-center">
+    <div>
+        <span class="badge bg-primary">@hofaphil</span>
     </div>
-</div>
-
+    <div>
+        <a class="btn bg-black" href="/">
+                <h1 class="card-text heading">👨‍💻</h1>
+        </a>
+    </div>
+    <h1 class="card-text text-white heading">Hi, i am Phil.</h1>
+    <h4 class="text-white mb-5">I am studying Computer Science at University of Augsburg.</h4>
+    <div class="d-grid d-md-block">
+        <a class="btn btn-outline-light btn-lg m-1" href="https://github.com/hofaphil" target="_blank">
+            <i class="mdi mdi-github" aria-hidden="true"></i>
+            GitHub
+        </a>
+        <a class="btn btn-outline-light btn-lg m-1" href="http://play.google.com/store/apps/details?id=com.aol.philipphofer" target="_blank">
+            <i class="mdi mdi-android" aria-hidden="true"></i>
+            Android
+        </a>
+        <a class="btn btn-outline-light btn-lg m-1" href="/contact">
+            <i class="mdi mdi-account" aria-hidden="true"></i>
+            Contact
+        </a>
+    </div>
 </body>
 </html>
+
+<style>
+    .heading {
+        font-size: 69pt;
+    }
+</style>

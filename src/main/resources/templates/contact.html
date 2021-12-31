@@ -5,17 +5,36 @@
     <th:block th:replace="fragments/icons"/>
     <th:block th:replace="fragments/head"/>
 </head>
-<body class="bg-light">
-<th:block th:replace="fragments/nav"/>
-<div class="m-5">
-    <h1>Impressum</h1>
-    <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-    <p>Philipp Hofer<br/>
-        Ortlerstrasse 82<br/>
-        86163 Augsburg</p>
-    <h2>Kontakt</h2>
-    <p>Telefon: 01719141970<br/>
-        E-Mail: admin@philipphofer.de</p>
+<body class="bg-black text-white">
+
+<div class="card bg-black text-center m-4">
+    <div>
+        <a class="btn bg-black" href="/">
+            <i class="heading text-white mdi mdi-keyboard-backspace"></i>
+        </a>
+    </div>
+    <h1 class="card-text heading">Contact</h1>
 </div>
+<div class="card border-white bg-black m-4 p-md-5">
+    <div class="card-body">
+        <h1>Impressum</h1>
+        <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+        <p>Philipp Hofer<br/>
+            Ortlerstrasse 82<br/>
+            86163 Augsburg
+        </p>
+        <h2>Kontakt</h2>
+        <p>Telefon: 01719141970<br/>
+            E-Mail: admin@philipphofer.de
+        </p>
+    </div>
+</div>
+
 </body>
 </html>
+
+<style>
+    .heading {
+        font-size: 69pt;
+    }
+</style>
