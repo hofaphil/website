@@ -1,2 +1,2 @@
 mvn clean install
-java -jar target/website-0.0.1-SNAPSHOT.jar &
+java -Dserver.port=4001 -Dspring.profiles.active=prod -jar target/website-0.0.1-SNAPSHOT.jar &
