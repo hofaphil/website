@@ -19,11 +19,6 @@ public class PageController {
         return "contact";
     }
 
-    @GetMapping(".well-known/assetlinks.json")
-    public String assetlinks() {
-        return "assetlinks.json";
-    }
-
     @GetMapping("/share")
     public String share(@RequestParam String id, Model model) {
         model.addAttribute("id", id);
