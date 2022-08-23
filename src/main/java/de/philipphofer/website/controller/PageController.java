@@ -1,5 +1,6 @@
 package de.philipphofer.website.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,11 @@ public class PageController {
     @GetMapping("/contact")
     public String contact() {
         return "contact";
+    }
+
+    @GetMapping(value = "/.well-known/assetlinks.json", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String getBeers() {
+        return "assetlinks.json";
     }
 
     @GetMapping("/share")
