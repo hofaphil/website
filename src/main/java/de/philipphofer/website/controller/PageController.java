@@ -21,8 +21,13 @@ public class PageController {
     }
 
     @GetMapping(value = "/.well-known/assetlinks.json", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String getBeers() {
+    public String androidWellKnown() {
         return "assetlinks.json";
+    }
+
+    @GetMapping(value = "/.well-known/apple-app-site-association", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String appleWellKnown() {
+        return "apple-app-site-association.json";
     }
 
     @GetMapping("/share")
