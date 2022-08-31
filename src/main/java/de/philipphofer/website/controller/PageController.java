@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
+import java.util.stream.Collectors;
 
 
 @Controller
@@ -31,9 +35,12 @@ public class PageController {
     }
 
     @GetMapping(value = "/.well-known/apple-app-site-association", produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody String appleWellKnown() throws Exception {
-        File resource = new ClassPathResource("templates/apple-app-site-association.json").getFile();
-        return new String(Files.readAllBytes(resource.toPath()));
+    public @ResponseBody
+    String appleWellKnown() throws Exception {
+        InputStream resource = new ClassPathResource("templates/apple-app-site-association.json").getInputStream();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource))) {
+            return reader.lines().collect(Collectors.joining("\n"));
+        }
     }
 
     @GetMapping("/share")
