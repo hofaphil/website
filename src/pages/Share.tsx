@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { HOME } from '../App';
 import Badge from '../components/badge';
 import './Share.css';
 
@@ -16,7 +17,7 @@ export default function Share() {
     <div>
       <div className="row justify-content-md-center m-4">
         <div className="col-auto">
-          <a className="btn bg-black text-white" href="/">
+          <a className="btn bg-black text-white" href={HOME}>
             <img className="img-fluid hw-12" src="/img/icon.png" alt="programmer-emoji"/>
               <h1 className="ms-2 align-middle display-inline">Philipp Hofer</h1>
           </a>

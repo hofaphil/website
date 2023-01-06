@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aol.philipphofer",
+      "sha256_cert_fingerprints": [
+        "81:13:83:7E:CF:D8:72:2D:11:BE:9F:05:CC:C2:0A:35:22:0C:09:B5:3E:A3:41:D0:65:DF:E2:41:76:24:25:92"
+      ]
+    }
+  }
+]

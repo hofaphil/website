@@ -1,3 +1,4 @@
+import { HOME } from '../App';
 import './Contact.css';
 
 export default function Contact() {
@@ -5,7 +6,7 @@ export default function Contact() {
     <div className="text-white">
       <div className="card bg-black text-center m-4">
         <div>
-          <a className="btn bg-black" href="/">
+          <a className="btn bg-black" href={HOME}>
             <i className="text-white heading bi bi-arrow-left"></i>
           </a>
         </div>

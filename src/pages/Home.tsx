@@ -1,3 +1,4 @@
+import { CONTACT, HOME } from '../App';
 import Button from '../components/button';
 import DropdownButton from '../components/dropdown/dropdownButton';
 import DropdownItem from '../components/dropdown/dropdownItem';
@@ -10,7 +11,7 @@ export default function Home() {
         <span className="badge bg-primary">@hofaphil</span>
       </div>
       <div>
-        <a className="btn bg-black" href="/">
+        <a className="btn bg-black" href={HOME}>
           <img className="img-fluid programmer-img" src="img/icon.png" alt="programmer-emoji"/>
         </a>
       </div>
@@ -25,7 +26,7 @@ export default function Home() {
           <DropdownItem text="iOS" link="https://apps.apple.com/app/sudoku-expert/id1641677021" icon="bi-apple" blank/>
         </DropdownButton>
 
-        <Button text="Contact" link="/contact" icon="bi-person-circle"/>
+        <Button text="Contact" link={CONTACT} icon="bi-person-circle"/>
       </div>
     </div>
   )
