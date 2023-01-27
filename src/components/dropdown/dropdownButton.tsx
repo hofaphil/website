@@ -8,14 +8,16 @@ export interface Props {
 
 export default function DropdownButton(props: Props) {
   return (
-    <button className={"btn btn-outline-light btn-lg m-1 dropdown-toggle"} data-bs-toggle="dropdown" aria-expanded="false">
-      {!!props.icon &&
-        <i className={"me-2 bi " + props.icon} aria-hidden="true"></i>
-      }
-      {props.text}
+    <div className="dropdown btn-group">
+      <button className={"btn btn-outline-light btn-lg m-1 dropdown-toggle"} data-bs-toggle="dropdown" aria-expanded="false">
+        {!!props.icon &&
+          <i className={"me-2 bi " + props.icon} aria-hidden="true"></i>
+        }
+        {props.text}
+      </button>
       <ul className="dropdown-menu">
         {props.children}
       </ul>
-    </button>
+    </div>
   )
 }
