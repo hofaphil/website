@@ -9,8 +9,8 @@ export interface Props {
 
 export default function DropdownItem(props: Props) {
   return (
-    <li>
-      <a className="dropdown-item" href={props.link} target={props.blank ? "_blank" : "_self"} rel="noreferrer">
+    <li className="m-2">
+      <a className="dropdown-item" href={props.link} target={props.blank ? "_blank" : "_self"} rel="noreferrer" style={{borderRadius: "5px"}}>
         {!!props.icon &&
           <i className={"me-2 bi " + props.icon} aria-hidden="true"></i>
         }

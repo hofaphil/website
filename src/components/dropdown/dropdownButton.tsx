@@ -15,7 +15,7 @@ export default function DropdownButton(props: Props) {
         }
         {props.text}
       </button>
-      <ul className="dropdown-menu">
+      <ul className="dropdown-menu p-0">
         {props.children}
       </ul>
     </div>
