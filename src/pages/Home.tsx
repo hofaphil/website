@@ -16,7 +16,7 @@ export default function Home() {
         </a>
       </div>
       <h1 className="card-text text-white heading">Hi, I am Phil.</h1>
-      <h4 className="text-white mb-5">I am studying Computer Science at University of Augsburg.</h4>
+      <h4 className="text-white mb-5">I am addicted to programming.</h4>
 
       <div className="d-grid d-md-block">
         <Button text="GitHub" link="https://github.com/hofaphil" icon="bi-github" blank />
