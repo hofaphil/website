@@ -5,7 +5,7 @@ export interface Props {
   blank?: boolean
 }
 
-export default function DropdownItem(props: Props) {
+export default function DropdownItem(props: Readonly<Props>) {
   return (
     <li className="m-2">
       <a className="dropdown-item" href={props.link} target={props.blank ? "_blank" : "_self"} rel="noreferrer" style={{borderRadius: "0.375rem"}}>

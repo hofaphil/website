@@ -6,7 +6,7 @@ import './Home.css';
 
 export default function Home() {
   return (
-    <div className="m-5 card bg-black text-center">
+    <div className="m-5 pt-lg-5 card bg-black text-center">
       <div>
         <span className="badge bg-primary">@hofaphil</span>
       </div>
@@ -15,8 +15,8 @@ export default function Home() {
           <img className="img-fluid programmer-img" src="img/icon.png" alt="programmer-emoji" />
         </a>
       </div>
-      <h1 className="card-text text-white heading">Hi, I am Phil.</h1>
-      <h4 className="text-white mb-5">I am addicted to programming.</h4>
+      <h1 className="card-text text-white heading mt-5">Hi, I am Phil.</h1>
+      <h2 className="text-white mb-5">I am addicted to programming.</h2>
 
       <div className="d-grid d-md-block">
         <Button text="GitHub" link="https://github.com/hofaphil" icon="bi-github" blank />
