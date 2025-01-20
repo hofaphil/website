@@ -2,7 +2,7 @@
 import Page from "../layouts/Page.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
-import ProgrammerIcon from "../images/icon.png"
+import ProgrammerIcon from "../images/icon.png";
 ---
 
 <Page pageTitle="Home">
@@ -14,7 +14,7 @@ import ProgrammerIcon from "../images/icon.png"
       <a class="btn bg-black" href="/">
         <Image
           class="img-fluid programmer-img"
-					loading="eager"
+          loading="eager"
           src={ProgrammerIcon}
           alt="programmer-emoji"
         />
@@ -23,7 +23,7 @@ import ProgrammerIcon from "../images/icon.png"
     <h1 class="card-text text-white heading mt-5">Hi, I am Phil.</h1>
     <h2 class="text-white mb-5">I am addicted to programming.</h2>
 
-		<div class="d-grid d-md-block">
+    <div class="d-grid d-md-block">
       <Button
         text="GitHub"
         link="https://github.com/hofaphil"
@@ -42,11 +42,7 @@ import ProgrammerIcon from "../images/icon.png"
         target="_blank"
         icon="bi-linkedin"
       />
-      <Button
-      text="Sudoku Expert"
-      link="share"
-      icon="bi-joystick"
-    />
+      <Button text="Sudoku Expert" link="share" icon="bi-joystick" />
     </div>
   </div>
 

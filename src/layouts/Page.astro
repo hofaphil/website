@@ -3,11 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 type Props = {
-	backgroundColor?: string,
+  backgroundColor?: string;
   pageTitle?: string;
 };
 
-const { pageTitle = "philipphofer.de", backgroundColor = "black" } = Astro.props;
+const { pageTitle = "philipphofer.de", backgroundColor = "black" } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +19,7 @@ const { pageTitle = "philipphofer.de", backgroundColor = "black" } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
     <meta name="description" content="Personal website of Philipp Hofer" />
     <title>{pageTitle}</title>
   </head>
