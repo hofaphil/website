@@ -1,0 +1,20 @@
+---
+type Props = {
+  text: string;
+  link: string;
+  target?: "_blank" | "_self";
+  icon?: string;
+};
+
+const { text, link, target = "_self", icon = undefined } = Astro.props;
+---
+
+<a
+  class="btn btn-outline-light m-1"
+  href={link}
+  target={target}
+  rel="noreferrer"
+>
+  {!!icon && <i class={"me-2 bi " + icon} aria-hidden="true" />}
+  {text}
+</a>
