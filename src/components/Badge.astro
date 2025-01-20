@@ -1,0 +1,23 @@
+---
+import Image from 'astro/components/Image.astro';
+
+type Props = {
+  link: string;
+  img: ImageMetadata;
+  imgAlt: string;
+};
+
+const { link, img, imgAlt } = Astro.props;
+---
+
+<div class="mx-auto m-1" style={{ maxWidth: "25rem" }}>
+  <a href={link} target="_blank" rel="noreferrer">
+    <Image
+      class="img-fluid"
+      src={img}
+      loading="eager"
+      alt={imgAlt}
+      style={{ width: "60%", height: "60%" }}
+    />
+  </a>
+</div>

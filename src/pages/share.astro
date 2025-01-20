@@ -1,0 +1,55 @@
+---
+import Page from "../layouts/Page.astro";
+import { Image } from "astro:assets";
+import Badge from "../components/Badge.astro";
+import GoogleBatch from "../images/google-badge.png";
+import AppleBatch from "../images/apple-badge.png";
+import SudokuExpertLogo from "../images/logo.png";
+---
+
+<Page pageTitle="Sudoku Expert" backgroundColor="white">
+  <div class="bg-white text-center m-5 pt-lg-5">
+    <Image
+      class="img-fluid rounded-5"
+      width="200"
+      height="200"
+      src={SudokuExpertLogo}
+      loading="eager"
+      alt="logo"
+    />
+    <div>
+      <h1 class="mt-5">Sudoku Expert</h1>
+      <h4 class="mt-3 mb-5">Play unlimited Sudoku for free!</h4>
+
+      <Badge
+        link="http://play.google.com/store/apps/details?id=com.aol.philipphofer"
+        img={GoogleBatch}
+        imgAlt="get the app for android"
+      />
+      <Badge
+        link="https://apps.apple.com/app/sudoku-expert/id1641677021"
+        img={AppleBatch}
+        imgAlt="get the app for apple"
+      />
+
+      <div class="mx-auto m-5 max-width-25">
+        <a id="link-to-game" class="btn bg-primary text-white">
+          <i class="me-2 bi bi-check-circle"/>
+          I already have the Sudoku app
+        </a>
+      </div>
+    </div>
+  </div>
+</Page>
+
+<script lang="ts">
+  const id = new URLSearchParams(window.location.search).get("id") || "";
+  const url = `hofer.sudoku.expert://?id=${id}`;
+
+  const button = document.getElementById("link-to-game");
+  button.href = url;
+</script>
+
+<style>
+
+</style>
