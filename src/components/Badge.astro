@@ -10,14 +10,14 @@ type Props = {
 const { link, img, imgAlt } = Astro.props;
 ---
 
-<div class="mx-auto m-1" style={{ maxWidth: "25rem" }}>
+<div class="mx-auto m-1" style={{ maxWidth: "20rem" }}>
   <a href={link} target="_blank" rel="noreferrer">
     <Image
       class="img-fluid"
       src={img}
       loading="eager"
       alt={imgAlt}
-      style={{ width: "60%", height: "60%" }}
+      style={{ width: "75%", height: "75%" }}
     />
   </a>
 </div>
