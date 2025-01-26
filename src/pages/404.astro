@@ -1,0 +1,27 @@
+---
+import Page from "../layouts/Page.astro";
+import Button from "../components/Button.astro";
+---
+
+<Page pageTitle="Not Found" backgroundColor="white">
+  <div class="m-5 pt-lg-5 text-center">
+    <i class="heading bi bi-ban text-danger"></i>
+    <h1 class="card-text heading">Not Found.</h1>
+    <p>The requested content cannot be found.</p>
+
+    <div class="mt-5">
+      <Button
+        text="Go Home"
+        link="https://philipphofer.de"
+        type="primary"
+        icon="arrow-left-circle"
+      />
+    </div>
+  </div>
+
+  <style>
+    .heading {
+      font-size: 4rem;
+    }
+  </style>
+</Page>

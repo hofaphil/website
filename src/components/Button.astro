@@ -4,17 +4,28 @@ type Props = {
   link: string;
   target?: "_blank" | "_self";
   icon?: string;
+  type?: string;
 };
 
-const { text, link, target = "_self", icon = undefined } = Astro.props;
+const {
+  text,
+  link,
+  target = "_self",
+  icon = undefined,
+  type = "outline-light",
+} = Astro.props;
+
+const btnClass = () => {
+  return `btn m-1 btn-${type}`;
+}
 ---
 
 <a
-  class="btn btn-outline-light m-1"
+  class={btnClass()}
   href={link}
   target={target}
   rel="noreferrer"
 >
-  {!!icon && <i class={"me-2 bi " + icon} aria-hidden="true" />}
+  {!!icon && <i class={`me-2 bi bi-${icon}`} aria-hidden="true" />}
   {text}
 </a>
