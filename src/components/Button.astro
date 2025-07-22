@@ -17,15 +17,10 @@ const {
 
 const btnClass = () => {
   return `btn m-1 btn-${type}`;
-}
+};
 ---
 
-<a
-  class={btnClass()}
-  href={link}
-  target={target}
-  rel="noreferrer"
->
+<a class={btnClass()} href={link} target={target} rel="noreferrer">
   {!!icon && <i class={`me-2 bi bi-${icon}`} aria-hidden="true" />}
   {text}
 </a>
