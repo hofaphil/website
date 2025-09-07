@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "format": "prettier . --write",
-    "format-check": "prettier . --check",
+    "format": "prettier ./src --write",
+    "format-check": "prettier ./src --check",
     "preview": "astro preview",
     "astro": "astro"
   },
