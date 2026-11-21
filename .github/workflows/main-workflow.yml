@@ -32,3 +32,14 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/philipphofer-website:latest
             ghcr.io/${{ github.repository_owner }}/philipphofer-website:${{ steps.date.outputs.date }}
+      - name: Tell n8n to pull the new image
+        # GET without auth to the URL in the N8N_SERVER_PULL_WEBHOOK secret; skipped when not set
+        if: github.event_name != 'pull_request'
+        env:
+          WEBHOOK_URL: ${{ secrets.N8N_SERVER_PULL_WEBHOOK }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "N8N_SERVER_PULL_WEBHOOK is not set; skipping."
+            exit 0
+          fi
+          curl -fsS --retry 3 --max-time 30 -o /dev/null "$WEBHOOK_URL"
